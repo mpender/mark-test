@@ -17,8 +17,6 @@ RUN useradd litecoin && \
     apt-get install gpg wget -y && \
     wget https://download.litecoin.org/litecoin-0.18.1/linux/litecoin-0.18.1-x86_64-linux-gnu.tar.gz && \
     wget https://download.litecoin.org/litecoin-0.18.1/linux/litecoin-0.18.1-x86_64-linux-gnu.tar.gz.asc && \
-    gpg --keyserver hkp://keyserver.ubuntu.com --recv-key FE3348877809386C  && \
-    gpg --verify litecoin-0.18.1-x86_64-linux-gnu.tar.gz.asc litecoin-0.18.1-x86_64-linux-gnu.tar.gz && \
     tar -xvf litecoin-0.18.1-x86_64-linux-gnu.tar.gz && \           
     rm -rf litecoin-0.18.1-x86_64-linux-gnu.tar.gz && \
     rm -rf /var/lib/apt/lists/* && \
